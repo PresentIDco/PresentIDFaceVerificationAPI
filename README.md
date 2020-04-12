@@ -14,28 +14,28 @@ The Face Verification Web Service is called Restful and in the post method. The 
       'resultMessage': string, 
       'similarPercent': float
     }, 
-  'Features': 
+  'imageSpecs': 
     [
       {
-        'Gender': null, 
-        'Age': null, 
+        'gender': null, 
+        'age': null, 
         'Framepoints': 
           {
-            'LeftTop': {'x': int, 'y': int}, 
-            'RightTop': {'x': int, 'y': int}, 
-            'RightBottom': {'x': int, 'y': int}, 
-            'LeftBottom': {'x': int, 'y': int}
+            'leftTop': {'x': int, 'y': int}, 
+            'rightTop': {'x': int, 'y': int}, 
+            'rightBottom': {'x': int, 'y': int}, 
+            'leftBottom': {'x': int, 'y': int}
           }
       }, 
       {
-        'Gender': null, 
-        'Age': null, 
+        'gender': null, 
+        'gge': null, 
         'Framepoints': 
           {
-            'LeftTop': {'x': int, 'y': int}, 
-            'RightTop': {'x': int, 'y': int}, 
-            'RightBottom': {'x': int, 'y': int}, 
-            'LeftBottom': {'x': int, 'y': int}
+            'leftTop': {'x': int, 'y': int}, 
+            'rightTop': {'x': int, 'y': int}, 
+            'rightBottom': {'x': int, 'y': int}, 
+            'leftBottom': {'x': int, 'y': int}
           }
       }
     ]
@@ -61,7 +61,7 @@ To install [requests](https://pypi.org/project/requests/), simply:
 ### Usage
 The python sample code is [Here](Python/FaceVerification.py).  
 
-* Give your API Key from [my.HiBrainy.com](https://my.HiBrainy.com) in the Dashboard page. and assign `api_key` variable.  
+* Give your API Key from [rapidapi](https://rapidapi.com/HiBrainy/api/face-recognition4) and assign 'api_key' variable.
 
   ```python
     api_key = 'Your API Key'
@@ -113,23 +113,24 @@ Install-Package Newtonsoft.Json
 	string apiKey = "Your API Key";
 	HiBrainyFaceVerificationAPI faceVerification = new HiBrainyFaceVerificationAPI(apiKey);
 	var verificationResult = faceVerification.FaceVerificationAsync("Path to image1", "Path to image2").Result;
+	
+	Console.WriteLine("Status Code: " + verificationResult.statusCode);
+	Console.WriteLine("Status Message: " + verificationResult.statusMessage);
+	Console.WriteLine("Has Error: " + verificationResult.hasError);
 
-	Console.WriteLine("Status Code: " + verificationResult.StatusCode);
-	Console.WriteLine("Status Message: " + verificationResult.StatusMessage);
-	Console.WriteLine("Has Error: " + verificationResult.HasError);
+	Console.WriteLine("\nResult Index: " + verificationResult.data.resultIndex);
+	Console.WriteLine("Result Message: " + verificationResult.data.resultMessage);
+	Console.WriteLine("Similar Percent: " + verificationResult.data.similarPercent);
 
-	Console.WriteLine("\nResult Index: " + verificationResult.VerificationResult.resultIndex);
-	Console.WriteLine("Result Message: " + verificationResult.VerificationResult.resultMessage);
-	Console.WriteLine("Similar Percent: " + verificationResult.VerificationResult.similarPercent);
 
-	for (int i = 0; i < verificationResult.Features.Count; i++)
+	for (int i = 0; i < verificationResult.imageSpecs.Count; i++)
 	{
 		Console.WriteLine("\nFace " + (i + 1) + " Information:");
 		Console.WriteLine("Rectangle");
-		Console.WriteLine("LeftTop " + " X:" + verificationResult.Features[i].Framepoints.LeftTop.x + " Y:" + verificationResult.Features[i].Framepoints.LeftTop.y);
-		Console.WriteLine("LeftBottom " + " X:" + verificationResult.Features[i].Framepoints.LeftBottom.x + " Y:" + verificationResult.Features[i].Framepoints.LeftBottom.y);
-		Console.WriteLine("RightTop " + " X:" + verificationResult.Features[i].Framepoints.RightTop.x + " Y:" + verificationResult.Features[i].Framepoints.RightTop.y);
-		Console.WriteLine("RightBottom " + " X:" + verificationResult.Features[i].Framepoints.RightBottom.x + " Y:" + verificationResult.Features[i].Framepoints.RightBottom.y + "\n");
+		Console.WriteLine("LeftTop " + " X:" + verificationResult.imageSpecs[i].rectpoints.leftTop.x + " Y:" + verificationResult.imageSpecs[i].rectpoints.leftTop.y);
+		Console.WriteLine("LeftBottom " + " X:" + verificationResult.imageSpecs[i].rectpoints.leftBottom.x + " Y:" + verificationResult.imageSpecs[i].rectpoints.leftBottom.y);
+		Console.WriteLine("RightTop " + " X:" + verificationResult.imageSpecs[i].rectpoints.rightTop.x + " Y:" + verificationResult.imageSpecs[i].rectpoints.rightTop.y);
+		Console.WriteLine("RightBottom " + " X:" + verificationResult.imageSpecs[i].rectpoints.rightBottom.x + " Y:" + verificationResult.imageSpecs[i].rectpoints.rightBottom.y + "\n");
 	}
     ```
-	Give your API Key from [my.HiBrainy.com](https://my.HiBrainy.com) in the Dashboard page. and assign `apiKey` variable.
+	Give your API Key from [rapidapi](https://rapidapi.com/HiBrainy/api/face-recognition4) and assign 'apiKey' variable.

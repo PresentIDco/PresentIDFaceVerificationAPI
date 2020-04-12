@@ -1,10 +1,14 @@
-﻿public class FaceVerificationResponseResult
+﻿using System;
+using System.Collections.Generic;
+
+
+public class FaceVerificationResponseResult
 {
-    public int StatusCode { set; get; }
-    public string StatusMessage { set; get; }
-    public bool HasError { set; get; }
-    public FaceVerificationResult VerificationResult { set; get; }
-    public List<Features> Features { set; get; }
+    public int statusCode { set; get; }
+    public string statusMessage { set; get; }
+    public bool hasError { set; get; }
+    public FaceVerificationResult data { set; get; }
+    public List<Features> imageSpecs { set; get; }
 }
 
 public class FaceVerificationResult
@@ -16,17 +20,17 @@ public class FaceVerificationResult
 
 public class Features
 {
-    public Gender Gender { get; set; }
-    public AgeBoundary Age { get; set; }
-    public RectPoints Framepoints { get; set; }
+    //public Gender gender { get; set; }
+    //public AgeBoundary age { get; set; }
+    public RectPoints rectpoints { get; set; }
 }
 
 public class RectPoints
 {
-    public Dot LeftTop { get; set; }
-    public Dot RightTop { get; set; }
-    public Dot RightBottom { get; set; }
-    public Dot LeftBottom { get; set; }
+    public Dot leftTop { get; set; }
+    public Dot rightTop { get; set; }
+    public Dot rightBottom { get; set; }
+    public Dot leftBottom { get; set; }
 }
 
 public class Dot
