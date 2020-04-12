@@ -10,35 +10,35 @@ The Face Verification Web Service is called Restful and in the post method. The 
   'HasError': bool, 
   'VerificationResult': 
     {
-	  'resultIndex': int, 
-	  'resultMessage': string, 
-	  'similarPercent': float
-	}, 
+      'resultIndex': int, 
+      'resultMessage': string, 
+      'similarPercent': float
+    }, 
   'Features': 
-	[
-	  {
-		'Gender': null, 
-		'Age': null, 
-		'Framepoints': 
-		  {
-			'LeftTop': {'x': int, 'y': int}, 
-			'RightTop': {'x': int, 'y': int}, 
-			'RightBottom': {'x': int, 'y': int}, 
-			'LeftBottom': {'x': int, 'y': int}
-		  }
-	  }, 
-	  {
-		'Gender': null, 
-		'Age': null, 
-		'Framepoints': 
-		  {
-			'LeftTop': {'x': int, 'y': int}, 
-			'RightTop': {'x': int, 'y': int}, 
-			'RightBottom': {'x': int, 'y': int}, 
-			'LeftBottom': {'x': int, 'y': int}
-		  }
-	  }
-	]
+    [
+      {
+        'Gender': null, 
+        'Age': null, 
+        'Framepoints': 
+          {
+            'LeftTop': {'x': int, 'y': int}, 
+            'RightTop': {'x': int, 'y': int}, 
+            'RightBottom': {'x': int, 'y': int}, 
+            'LeftBottom': {'x': int, 'y': int}
+          }
+      }, 
+      {
+        'Gender': null, 
+        'Age': null, 
+        'Framepoints': 
+          {
+            'LeftTop': {'x': int, 'y': int}, 
+            'RightTop': {'x': int, 'y': int}, 
+            'RightBottom': {'x': int, 'y': int}, 
+            'LeftBottom': {'x': int, 'y': int}
+          }
+      }
+    ]
 }
 
 ```
