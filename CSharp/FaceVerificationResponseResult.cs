@@ -1,7 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-
-
 public class FaceVerificationResponseResult
 {
     public int statusCode { set; get; }
