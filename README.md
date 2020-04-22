@@ -151,6 +151,7 @@ Install-Package Newtonsoft.Json
     import com.fasterxml.jackson.databind.ObjectMapper;
     import okhttp3.*;
     import java.io.File;
+    Import java.util.Hashmap;
    ```
  * You can get all the features through below:
 
