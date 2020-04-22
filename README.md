@@ -46,6 +46,7 @@ The Face Verification Web Service is called Restful and in the post method. The 
 ## Languages
   * [Python](#python)
   * [C#](#csharp)
+  * [Java](#java)
 
 ## Python
 
@@ -132,4 +133,76 @@ Install-Package Newtonsoft.Json
 		Console.WriteLine("RightBottom " + " X:" + verificationResult.Features[i].Framepoints.RightBottom.x + " Y:" + verificationResult.Features[i].Framepoints.RightBottom.y + "\n");
 	}
     ```
+	Give your API Key from [my.HiBrainy.com](https://my.HiBrainy.com) in the Dashboard page. and assign `apiKey` variable.
+
+
+## Java
+
+### Prerequisites
+ [OkHttp package](https://github.com/square/okhttp/) package  
+
+
+### Usage
+ * Add `FaceVerificationResponseResult` class in your project.  
+   [Here](Java/FaceVerificationResponseResult.java) is the content of the `FaceVerificationResponseResult.java` class. 
+
+ * Add following "using" statements to your project.  
+   ```java
+    import com.fasterxml.jackson.databind.ObjectMapper;
+    import okhttp3.*;
+    import java.io.File;
+   ```
+ * You can get all the features through below:
+
+    ```java
+	String apiURL = "http://api.hibrainy.com/api/v1/Face/FaceAllFeatures";
+	String apiKey = "Your API Key";
+	String imagePath1 = "Path to image1 file";
+	String imagePath2 = "Path to image2 file";
+	String imageName1 = "Image name1";
+	String imageName2 = "Image name2";
+	File file1 = new File(imagePath1 + imageName1);
+	File file2 = new File(imagePath2 + imageName2);
+	byte[] fileContent1 = new byte[(int) file1.length()];
+	byte[] fileContent2 = new byte[(int) file2.length()];
+	
+	OkHttpClient client = new OkHttpClient();
+    Request request = new Request.Builder()
+                .url(apiURL)
+                .post(RequestBody.create(MediaType.get("multipart/form-data"), fileContent1))
+				.post(RequestBody.create(MediaType.get("multipart/form-data"), fileContent2))
+                .header("API-Key", apiKey)
+                .build();
+	
+	Call call = client.newCall(request);
+    Response response = call.execute();
+    ObjectMapper mapper = new ObjectMapper();
+	
+	FaceVerificationResponseResult faceVerification = mapper.readValue(response.body().string(), FaceVerificationResponseResult.class);
+	System.out.println("Has Error: " + faceVerification.gethasError());
+	System.out.println("Status Code: " + faceVerification.getStatusCode());
+	System.out.println("Status Message: " + faceVerification.getStatusMessage());  
+
+	
+	System.out.println("\nResult Index: "+Integer.toString(faceVerification.getresultIndex()));
+	System.out.println("\nesult Message: "+faceVerification.getresultMessage());
+	System.out.println("\nSimilar Percent: "+Float.toString(faceVerification.getsimilarPercent()));
+	
+	int [][]lt = faceVerification.getLeftTop();
+	int [][]lb = faceVerification.getLeftBottom();
+	int [][]rt = faceVerification.getRightTop();
+	int [][]rb = faceVerification.getRightBottom();
+	
+	System.out.println("Face #1 Rectangle:");
+	System.out.println("Left Top:\t"+"X: "+Integer.toString(lt[0][0])+"\tY: "+Integer.toString(lt[0][1]));
+	System.out.println("Left Bottom:\t"+"X: "+Integer.toString(lb[0][0])+"\tY: "+Integer.toString(lb[0][1]));
+	System.out.println("Right Top:\t"+"X: "+Integer.toString(rt[0][0])+"\tY: "+Integer.toString(rt[0][1]));
+	System.out.println("LeftTop:\t"+"X: "+Integer.toString(rb[0][0])+"\tY: "+Integer.toString(rb[0][1]));
+	
+	System.out.println("Face #2 Rectangle:");
+	System.out.println("Left Top:\t"+"X: "+Integer.toString(lt[1][0])+"\tY: "+Integer.toString(lt[1][1]));
+	System.out.println("Left Bottom:\t"+"X: "+Integer.toString(lb[1][0])+"\tY: "+Integer.toString(lb[1][1]));
+	System.out.println("Right Top:\t"+"X: "+Integer.toString(rt[1][0])+"\tY: "+Integer.toString(rt[1][1]));
+	System.out.println("LeftTop:\t"+"X: "+Integer.toString(rb[1][0])+"\tY: "+Integer.toString(rb[1][1]));
+	```
 	Give your API Key from [my.HiBrainy.com](https://my.HiBrainy.com) in the Dashboard page. and assign `apiKey` variable.
