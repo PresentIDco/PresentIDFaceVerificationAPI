@@ -146,7 +146,7 @@ Install-Package Newtonsoft.Json
  * Add `FaceVerificationResponseResult` class in your project.  
    [Here](Java/FaceVerificationResponseResult.java) is the content of the `FaceVerificationResponseResult.java` class. 
 
- * Add following "using" statements to your project.  
+ * Add following "import" statements to your project.  
    ```java
     import com.fasterxml.jackson.databind.ObjectMapper;
     import okhttp3.*;
