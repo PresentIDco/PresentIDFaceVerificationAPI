@@ -179,7 +179,7 @@ Install-Package Newtonsoft.Json
     Response response = call.execute();
     ObjectMapper mapper = new ObjectMapper();
 	
-	Verification_DataModel faceVerification = mapper.readValue(response.body().string(), Verification_DataModel.class);
+	FaceVerificationResponseResult faceVerification = mapper.readValue(response.body().string(), FaceVerificationResponseResult.class);
 	System.out.println("Has Error: " + faceVerification.gethasError());
 	System.out.println("Status Code: " + faceVerification.getStatusCode());
 	System.out.println("Status Message: " + faceVerification.getStatusMessage());  
