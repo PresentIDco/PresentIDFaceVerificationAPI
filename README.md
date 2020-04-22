@@ -167,16 +167,16 @@ Install-Package Newtonsoft.Json
 	byte[] fileContent2 = new byte[(int) file2.length()];
 	
 	OkHttpClient client = new OkHttpClient();
-    Request request = new Request.Builder()
-                .url(apiURL)
-                .post(RequestBody.create(MediaType.get("multipart/form-data"), fileContent1))
-				.post(RequestBody.create(MediaType.get("multipart/form-data"), fileContent2))
-                .header("API-Key", apiKey)
-                .build();
+	Request request = new Request.Builder()
+		.url(apiURL)
+		.post(RequestBody.create(MediaType.get("multipart/form-data"), fileContent1))
+		.post(RequestBody.create(MediaType.get("multipart/form-data"), fileContent2))
+		.header("API-Key", apiKey)
+		.build();
 	
 	Call call = client.newCall(request);
-    Response response = call.execute();
-    ObjectMapper mapper = new ObjectMapper();
+	Response response = call.execute();
+	ObjectMapper mapper = new ObjectMapper();
 	
 	FaceVerificationResponseResult faceVerification = mapper.readValue(response.body().string(), FaceVerificationResponseResult.class);
 	System.out.println("Has Error: " + faceVerification.gethasError());
