@@ -8,7 +8,7 @@ public class FaceVerificationResponseResult {
 	int resultIndex;
 	String resultMessage;
 	float similarPercent;
-     
+
 	//FacePoints
 	int [][] LeftTop;
 	int [][] RightTop;
