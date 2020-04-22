@@ -146,7 +146,7 @@ Install-Package Newtonsoft.Json
  * Add `FaceVerificationResponseResult` class in your project.  
    [Here](Java/FaceVerificationResponseResult.java) is the content of the `FaceVerificationResponseResult.java` class. 
 
- * Add following "using" statements to your project.  
+ * Add following "import" statements to your project.  
    ```java
     import com.fasterxml.jackson.databind.ObjectMapper;
     import okhttp3.*;
@@ -156,7 +156,7 @@ Install-Package Newtonsoft.Json
  * You can get all the features through below:
 
     ```java
-	String apiURL = "http://api.hibrainy.com/api/v1/Face/FaceAllFeatures";
+	String apiURL = "http://api.hibrainy.com/api/v1/Face/FaceVerification";
 	String apiKey = "Your API Key";
 	String imagePath1 = "Path to image1 file";
 	String imagePath2 = "Path to image2 file";
