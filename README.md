@@ -165,15 +165,15 @@ Install-Package Newtonsoft.Json
 	File file2 = new File(imagePath2 + imageName2);
 	byte[] fileContent1 = new byte[(int) file1.length()];
 	byte[] fileContent2 = new byte[(int) file2.length()];
-	
+
 	OkHttpClient client = new OkHttpClient();
-    Request request = new Request.Builder()
-                .url(apiURL)
-                .post(RequestBody.create(MediaType.get("multipart/form-data"), fileContent1))
-				.post(RequestBody.create(MediaType.get("multipart/form-data"), fileContent2))
-                .header("x-rapidapi-host", "face-recognition4.p.rapidapi.com")
-                .header("x-rapidapi-key", apiKey)
-                .build();
+	Request request = new Request.Builder()
+		.url(apiURL)
+		.post(RequestBody.create(MediaType.get("multipart/form-data"), fileContent1))
+		.post(RequestBody.create(MediaType.get("multipart/form-data"), fileContent2))
+		.header("x-rapidapi-host", "face-recognition4.p.rapidapi.com")
+		.header("x-rapidapi-key", apiKey)
+		.build();
 	
 	Call call = client.newCall(request);
     Response response = call.execute();
