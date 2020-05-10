@@ -28,11 +28,11 @@ print("Similar Percent:", response.json()['data']['similarPercent'])
 for i in range(0, 2):
     print('\nFace', i + 1, 'Information:')
     print('Rectangle')
-    print("LeftTop", " X:", response.json()['imageSpecs'][i]['rectpoints']['leftTop']['x'],
-          " Y:", response.json()['imageSpecs'][i]['rectpoints']['leftTop']['y'])
-    print("LeftBottom", " X:", response.json()['imageSpecs'][i]['rectpoints']['leftBottom']['x'],
-          " Y:", response.json()['imageSpecs'][i]['rectpoints']['leftBottom']['y'])
-    print("RightTop", " X:", response.json()['imageSpecs'][i]['rectpoints']['rightTop']['x'],
-          " Y:", response.json()['imageSpecs'][i]['rectpoints']['rightTop']['y'])
-    print("RightBottom", " X:", response.json()['imageSpecs'][i]['rectpoints']['rightBottom']['x'],
-          " Y:", response.json()['imageSpecs'][i]['rectpoints']['rightBottom']['y'])
+    print("LeftTop", " X:", response.json()['imageSpecs'][i]['leftTop']['x'],
+          " Y:", response.json()['imageSpecs'][i]['leftTop']['y'])
+    print("LeftBottom", " X:", response.json()['imageSpecs'][i]['leftBottom']['x'],
+          " Y:", response.json()['imageSpecs'][i]['leftBottom']['y'])
+    print("RightTop", " X:", response.json()['imageSpecs'][i]['rightTop']['x'],
+          " Y:", response.json()['imageSpecs'][i]['rightTop']['y'])
+    print("RightBottom", " X:", response.json()['imageSpecs'][i]['rightBottom']['x'],
+          " Y:", response.json()['imageSpecs'][i]['rightBottom']['y'])
