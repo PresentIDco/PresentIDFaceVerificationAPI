@@ -18,15 +18,10 @@ public class Features
 {
     //public Gender gender { get; set; }
     //public AgeBoundary age { get; set; }
-    public RectPoints rectpoints { get; set; }
-}
-
-public class RectPoints
-{
-    public Dot leftTop { get; set; }
-    public Dot rightTop { get; set; }
-    public Dot rightBottom { get; set; }
-    public Dot leftBottom { get; set; }
+     public Dot leftTop { get; set; }
+     public Dot rightTop { get; set; }
+     public Dot rightBottom { get; set; }
+     public Dot leftBottom { get; set; }
 }
 
 public class Dot
