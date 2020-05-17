@@ -1,4 +1,4 @@
-# HiBrainyAPIs - Face Verification
+# HiBrainy - RapidAPI Face Verification API Documentation
 The Face Verification Web Service is called Restful and in the post method. The parameters and input files are sent to the API in the form of Multipart Form. The service output is returned in Json format.
 
 ## Output Template
