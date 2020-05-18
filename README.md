@@ -238,7 +238,7 @@ Install-Package Newtonsoft.Json
     <uses-permission android:name="android.permission.INTERNET" />
     ```
 
- * Call Function `faceVerification()` to send images and call Function `getFaceVerificationResult` to get the result code.
+ * Call Function `faceVerification()` to send images and call Function `getFaceVerificationResult()` to get the result code.
     ```java
     faceVerification(imageFile1, imageFile2);
     int resultCode = getFaceVerificationResult();
