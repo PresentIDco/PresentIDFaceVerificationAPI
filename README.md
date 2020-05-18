@@ -1,5 +1,5 @@
 # HiBrainy - RapidAPI Face Verification API Documentation
-The Face Verification Web Service is called Restful and in the post method. The parameters and input files are sent to the API in the form of Multipart Form. The service output is returned in Json format.
+The HiBrainy Face Verification API is organized around RESTful and is called through post method. The parameters and input files are sent to the API in the form of Multipart Form. The service output is returned in Json format.
 
 ## Output Template
 
@@ -51,21 +51,22 @@ The Face Verification Web Service is called Restful and in the post method. The 
 ## Python
 
 ### Prerequisites
-  [requests](https://pypi.org/project/requests/) python package.
-
-#### Installation
-To install [requests](https://pypi.org/project/requests/), simply:
- ```
- $ pip install requests
- ```
+ - Face Recognition API-Key
+    - You can get a free trial API-Key by creating your free account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
+    
+ - [Requests](https://pypi.org/project/requests/) python package
+    - To install [requests](https://pypi.org/project/requests/), simply:
+   ```
+   $ pip install requests
+   ```
 
 ### Usage
 The python sample code is [Here](Python/FaceVerification.py).  
 
-* Give your API Key from [rapidapi](https://rapidapi.com/HiBrainy/api/face-recognition4) and assign 'api_key' variable.
+* Assign the variable `api_key` by your API-Key you took from [your account](https://my.hibrainy.com).
 
   ```python
-    api_key = 'Your API Key'
+    api_key = 'Your API-Key'
   ```
 
 * Assign the variables `image1_path`, `image1_name`, `image2_path` and `image2_name`, by images path and images name.  
@@ -79,13 +80,14 @@ The python sample code is [Here](Python/FaceVerification.py).
 ## CSharp  
 
 ### Prerequisites
- [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) framework for .NET    
-
-#### Installation
-Run this command in the Package Manager Console:  
-``` 
-Install-Package Newtonsoft.Json
-```
+ - Face Recognition API-Key
+    - You can get a free trial API-Key by creating your free account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
+    
+ - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) framework for .NET 
+    - Run this command in the Package Manager Console:  
+      ``` 
+      Install-Package Newtonsoft.Json
+      ```
 
 ### Usage
 
@@ -111,7 +113,7 @@ Install-Package Newtonsoft.Json
   * Create "HiBrainyFaceVerificationAPI" class Instance. You can get all the features through below:  
  
     ```c#
-	string apiKey = "Your API Key";
+	string apiKey = "Your API-Key";
 	HiBrainyFaceVerificationAPI faceVerification = new HiBrainyFaceVerificationAPI(apiKey);
 	var verificationResult = faceVerification.FaceVerificationAsync("Path to image1", "Path to image2").Result;
 	
@@ -134,12 +136,15 @@ Install-Package Newtonsoft.Json
 		Console.WriteLine("RightBottom " + " X:" + verificationResult.imageSpecs[i].rectpoints.rightBottom.x + " Y:" + verificationResult.imageSpecs[i].rectpoints.rightBottom.y + "\n");
 	}
     ```
-	Give your API Key from [rapidapi](https://rapidapi.com/HiBrainy/api/face-recognition4) and assign 'apiKey' variable.
+  Assign the variable `apiKey` by your API-Key you took from [your account](https://my.hibrainy.com).
 
 ## Java
 
 ### Prerequisites
- [OkHttp package](https://github.com/square/okhttp/) package  
+ - Face Recognition API-Key
+    - You can get a free trial API-Key by creating your free account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
+    
+ - [OkHttp package](https://github.com/square/okhttp/) package  
 
 
 ### Usage
@@ -157,7 +162,7 @@ Install-Package Newtonsoft.Json
 
     ```java
 	String apiURL = "https://face-recognition4.p.rapidapi.com/FaceVerification";
-	String apiKey = "Your API Key";
+	String apiKey = "Your API-Key";
 	String imagePath1 = "Path to image1 file";
 	String imagePath2 = "Path to image2 file";
 	String imageName1 = "Image name1";
@@ -207,4 +212,4 @@ Install-Package Newtonsoft.Json
 	System.out.println("Right Top:\t"+"X: "+Integer.toString(rt[1][0])+"\tY: "+Integer.toString(rt[1][1]));
 	System.out.println("LeftTop:\t"+"X: "+Integer.toString(rb[1][0])+"\tY: "+Integer.toString(rb[1][1]));
 	```
-	Give your API Key from [rapidapi](https://rapidapi.com/HiBrainy/api/face-recognition4) and assign 'apiKey' variable.
+   Assign the variable `apiKey` by your API-Key you took from [your account](https://my.hibrainy.com).
