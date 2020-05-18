@@ -233,15 +233,15 @@ Install-Package Newtonsoft.Json
 
  * Insert the following element as a direct child of the manifest element. 
     ```xml
-        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-        <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     ```
 
  * Call Function `faceVerification()` to send images and call Function `getFaceVerificationResult` to get the result code.
     ```java
-      faceVerification(imageFile1, imageFile2);
-      int resultCode = getFaceVerificationResult();
+    faceVerification(imageFile1, imageFile2);
+    int resultCode = getFaceVerificationResult();
     ```
    | resultCode | Description |
    | :---: | --- |
