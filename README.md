@@ -1,5 +1,5 @@
 # HiBrainy - Face Verification API Documentation
-The Face Verification Web Service is called Restful and in the post method. The parameters and input files are sent to the API in the form of Multipart Form. The service output is returned in Json format.
+The HiBrainy Face Verification API is organized around RESTful and is called through post method. The parameters and input files are sent to the API in the form of Multipart Form. The service output is returned in Json format.
 
 ## Output Template
 
@@ -52,24 +52,26 @@ The Face Verification Web Service is called Restful and in the post method. The 
 ## Python
 
 ### Prerequisites
-  [requests](https://pypi.org/project/requests/) python package.
+ - Face Verification API-Key
+    - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Token and get your Face Recognition API-Key.
+    
+ - [requests](https://pypi.org/project/requests/) python package
+    - To install [requests](https://pypi.org/project/requests/), simply:
+   ```
+   $ pip install requests
+   ```
 
-#### Installation
-To install [requests](https://pypi.org/project/requests/), simply:
- ```
- $ pip install requests
- ```
 
 ### Usage
 The python sample code is [Here](Python/FaceVerification.py).  
 
-* Give your API Key from [my.HiBrainy.com](https://my.HiBrainy.com) in the Dashboard page. and assign `api_key` variable.  
+* Assign the variable `api_key` by your API-Key you took from [your account](https://my.hibrainy.com).
 
   ```python
-    api_key = 'Your API Key'
+    api_key = 'Your API-Key'
   ```
 
-* Assign the variables `image1_path`, `image1_name`, `image2_path` and `image2_name`, by images path and images name.  
+* Assign the variables `image1_path`, `image1_name`, `image2_path` and `image2_name`, by images path and images name, respectively.  
   ```python
     image1_path = 'Path to image1 directory'
     image1_name = 'Image name1'
@@ -80,13 +82,14 @@ The python sample code is [Here](Python/FaceVerification.py).
 ## CSharp  
 
 ### Prerequisites
- [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) framework for .NET    
-
-#### Installation
-Run this command in the Package Manager Console:  
-``` 
-Install-Package Newtonsoft.Json
-```
+ - Face Verification API-Key
+    - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Token and get your Face Recognition API-Key.
+    
+ - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) framework for .NET 
+    - Run this command in the Package Manager Console:  
+      ``` 
+      Install-Package Newtonsoft.Json
+      ```
 
 ### Usage
 
@@ -134,13 +137,16 @@ Install-Package Newtonsoft.Json
       Console.WriteLine("RightBottom " + " X:" + verificationResult.Features[i].Framepoints.RightBottom.x + " Y:" + verificationResult.Features[i].Framepoints.RightBottom.y + "\n");
     }
     ```
-  Give your API Key from [my.HiBrainy.com](https://my.HiBrainy.com) in the Dashboard page. and assign `apiKey` variable.
+  Assign the variable `apiKey` by your API-Key you took from [your account](https://my.hibrainy.com).
 
 
 ## Java
 
 ### Prerequisites
- [OkHttp package](https://github.com/square/okhttp/) package  
+ - Face Verification API-Key
+    - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Token and get your Face Recognition API-Key.
+    
+ - [OkHttp package](https://github.com/square/okhttp/) package  
 
 
 ### Usage
@@ -207,12 +213,15 @@ Install-Package Newtonsoft.Json
     System.out.println("Right Top:\t"+"X: "+Integer.toString(rt[1][0])+"\tY: "+Integer.toString(rt[1][1]));
     System.out.println("LeftTop:\t"+"X: "+Integer.toString(rb[1][0])+"\tY: "+Integer.toString(rb[1][1]));
     ```
- Give your API Key from [my.HiBrainy.com](https://my.HiBrainy.com) in the Dashboard page. and assign `apiKey` variable.
+   Assign the variable `apiKey` by your API-Key you took from [your account](https://my.hibrainy.com).
 
 ## Android
 
 ### Prerequisites 
-[Visual Studio](https://visualstudio.microsoft.com/downloads/)  
+ - Face Verification API-Key
+    - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Token and get your Face Recognition API-Key.
+    
+  - [Visual Studio](https://visualstudio.microsoft.com/downloads/)  
 
 
 ### Usage
@@ -228,7 +237,7 @@ Install-Package Newtonsoft.Json
    
    
  * Add `HiBrainyPostURLUtils` class in your project. [Here](Android/HiBrainyPostURLUtils.java) is the content of the `HiBrainyPostURLUtils.java` class.  
-   - Give your API Key from [my.HiBrainy.com](https://my.HiBrainy.com) in the Dashboard page. and assign `apiKey` variable.
+   - Assign the variable `apiKey` by your API-Key you took from [your account](https://my.hibrainy.com).
    - Replace `YourPackageName;` to your Package Name.
 
  * Insert the following element as a direct child of the manifest element. 
