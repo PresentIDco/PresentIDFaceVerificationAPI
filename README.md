@@ -53,9 +53,9 @@ The HiBrainy Face Verification API is organized around RESTful and is called thr
 
 ### Prerequisites
  - Face Verification API-Key
-    - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Token and get your Face Recognition API-Key.
+    - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
     
- - [requests](https://pypi.org/project/requests/) python package
+ - [Requests](https://pypi.org/project/requests/) python package
     - To install [requests](https://pypi.org/project/requests/), simply:
    ```
    $ pip install requests
@@ -83,7 +83,7 @@ The python sample code is [Here](Python/FaceVerification.py).
 
 ### Prerequisites
  - Face Verification API-Key
-    - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Token and get your Face Recognition API-Key.
+    - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
     
  - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) framework for .NET 
     - Run this command in the Package Manager Console:  
@@ -144,7 +144,7 @@ The python sample code is [Here](Python/FaceVerification.py).
 
 ### Prerequisites
  - Face Verification API-Key
-    - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Token and get your Face Recognition API-Key.
+    - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
     
  - [OkHttp package](https://github.com/square/okhttp/) package  
 
@@ -164,7 +164,7 @@ The python sample code is [Here](Python/FaceVerification.py).
 
     ```java
     String apiURL = "http://api.hibrainy.com/api/v1/Face/FaceVerification";
-    String apiKey = "Your API Key";
+    String apiKey = "Your API-Key";
     String imagePath1 = "Path to image1 file";
     String imagePath2 = "Path to image2 file";
     String imageName1 = "Image name1";
@@ -219,9 +219,10 @@ The python sample code is [Here](Python/FaceVerification.py).
 
 ### Prerequisites 
  - Face Verification API-Key
-    - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Token and get your Face Recognition API-Key.
+    - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
     
   - [Visual Studio](https://visualstudio.microsoft.com/downloads/)  
+  - [Android Studio] with API level 19 or later 
 
 
 ### Usage
@@ -233,12 +234,12 @@ The python sample code is [Here](Python/FaceVerification.py).
    ```
  
  * Add `HiBrainyFaceVerificationAPI` class in your project. [Here](Android/HiBrainyFaceVerificationAPI.java) is the content of the `HiBrainyFaceVerificationAPI.java` class.  
-   - Replace `YourPackageName;` to your Package Name.
+   - Replace `YourPackageName` with your Package Name.
    
    
  * Add `HiBrainyPostURLUtils` class in your project. [Here](Android/HiBrainyPostURLUtils.java) is the content of the `HiBrainyPostURLUtils.java` class.  
    - Assign the variable `apiKey` by your API-Key you took from [your account](https://my.hibrainy.com).
-   - Replace `YourPackageName;` to your Package Name.
+   - Replace `YourPackageName` with your Package Name.
 
  * Insert the following element as a direct child of the manifest element. 
     ```xml
