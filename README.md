@@ -52,7 +52,7 @@ The HiBrainy Face Verification API is organized around RESTful and is called thr
 ## Python
 
 ### Prerequisites
- - Face Verification API-Key
+ - Face Recognition API-Key
     - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
     
  - [Requests](https://pypi.org/project/requests/) python package
@@ -82,7 +82,7 @@ The python sample code is [Here](Python/FaceVerification.py).
 ## CSharp  
 
 ### Prerequisites
- - Face Verification API-Key
+ - Face Recognition API-Key
     - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
     
  - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) framework for .NET 
@@ -143,7 +143,7 @@ The python sample code is [Here](Python/FaceVerification.py).
 ## Java
 
 ### Prerequisites
- - Face Verification API-Key
+ - Face Recognition API-Key
     - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
     
  - [OkHttp package](https://github.com/square/okhttp/) package  
@@ -218,11 +218,11 @@ The python sample code is [Here](Python/FaceVerification.py).
 ## Android
 
 ### Prerequisites 
- - Face Verification API-Key
+ - Face Recognition API-Key
     - You can get a free trial API-Key by creating your account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
     
   - [Visual Studio](https://visualstudio.microsoft.com/downloads/)  
-  - [Android Studio] with API level 19 or later 
+  - [Android Studio](https://developer.android.com/studio/) with API level 19 or later 
 
 
 ### Usage
