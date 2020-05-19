@@ -52,7 +52,7 @@ The HiBrainy Face Verification API is organized around RESTful and is called thr
 
 ### Prerequisites
  - Face Recognition API-Key
-    - You can get a free trial API-Key by creating your free account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
+    - You can get RapidAPI API-Key by subscribing HiBrainy Face Recognition from [RapidAPI.com](https://rapidapi.com/HiBrainy/api/face-recognition4/endpoints).
     
  - [Requests](https://pypi.org/project/requests/) python package
     - To install [requests](https://pypi.org/project/requests/), simply:
@@ -63,7 +63,7 @@ The HiBrainy Face Verification API is organized around RESTful and is called thr
 ### Usage
 The python sample code is [Here](Python/FaceVerification.py).  
 
-* Assign the variable `api_key` by your API-Key you took from [your account](https://my.hibrainy.com).
+* Assign the variable `api_key` by API-Key you took from [your RapidAPI account](https://rapidapi.com/HiBrainy/api/face-recognition4/endpoints).
 
   ```python
     api_key = 'Your API-Key'
@@ -81,8 +81,8 @@ The python sample code is [Here](Python/FaceVerification.py).
 
 ### Prerequisites
  - Face Recognition API-Key
-    - You can get a free trial API-Key by creating your free account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
-    
+    - You can get RapidAPI API-Key by subscribing HiBrainy Face Recognition from [RapidAPI.com](https://rapidapi.com/HiBrainy/api/face-recognition4/endpoints).
+	
  - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) framework for .NET 
     - Run this command in the Package Manager Console:  
       ``` 
@@ -136,13 +136,13 @@ The python sample code is [Here](Python/FaceVerification.py).
 		Console.WriteLine("RightBottom " + " X:" + verificationResult.imageSpecs[i].rectpoints.rightBottom.x + " Y:" + verificationResult.imageSpecs[i].rectpoints.rightBottom.y + "\n");
 	}
     ```
-  Assign the variable `apiKey` by your API-Key you took from [your account](https://my.hibrainy.com).
+  Assign the variable `apiKey` by API-Key you took from [your RapidAPI account](https://rapidapi.com/HiBrainy/api/face-recognition4/endpoints).
 
 ## Java
 
 ### Prerequisites
  - Face Recognition API-Key
-    - You can get a free trial API-Key by creating your free account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
+    - You can get RapidAPI API-Key by subscribing HiBrainy Face Recognition from [RapidAPI.com](https://rapidapi.com/HiBrainy/api/face-recognition4/endpoints).
     
  - [OkHttp package](https://github.com/square/okhttp/) package  
 
@@ -212,4 +212,4 @@ The python sample code is [Here](Python/FaceVerification.py).
 	System.out.println("Right Top:\t"+"X: "+Integer.toString(rt[1][0])+"\tY: "+Integer.toString(rt[1][1]));
 	System.out.println("LeftTop:\t"+"X: "+Integer.toString(rb[1][0])+"\tY: "+Integer.toString(rb[1][1]));
 	```
-   Assign the variable `apiKey` by your API-Key you took from [your account](https://my.hibrainy.com).
+   Assign the variable `apiKey` by API-Key you took from [your RapidAPI account](https://rapidapi.com/HiBrainy/api/face-recognition4/endpoints).
