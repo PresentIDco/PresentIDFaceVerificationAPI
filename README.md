@@ -44,6 +44,7 @@ The HiBrainy Face Verification API is organized around RESTful and is called thr
 ```
 
 ## Languages
+
   * [Python](#python)
   * [C#](#csharp)
   * [Java](#java)
@@ -65,7 +66,7 @@ The HiBrainy Face Verification API is organized around RESTful and is called thr
 ### Usage
 The python sample code is [Here](Python/FaceVerification.py).  
 
-* Assign the variable `api_key` by your API-Key you took from [your account](https://my.hibrainy.com).
+* Assign the variable `api_key` by API-Key you took from [your account](https://my.hibrainy.com).
 
   ```python
     api_key = 'Your API-Key'
@@ -137,7 +138,7 @@ The python sample code is [Here](Python/FaceVerification.py).
       Console.WriteLine("RightBottom " + " X:" + verificationResult.Features[i].Framepoints.RightBottom.x + " Y:" + verificationResult.Features[i].Framepoints.RightBottom.y + "\n");
     }
     ```
-  Assign the variable `apiKey` by your API-Key you took from [your account](https://my.hibrainy.com).
+  Assign the variable `apiKey` by API-Key you took from [your account](https://my.hibrainy.com).
 
 
 ## Java
@@ -213,7 +214,7 @@ The python sample code is [Here](Python/FaceVerification.py).
     System.out.println("Right Top:\t"+"X: "+Integer.toString(rt[1][0])+"\tY: "+Integer.toString(rt[1][1]));
     System.out.println("LeftTop:\t"+"X: "+Integer.toString(rb[1][0])+"\tY: "+Integer.toString(rb[1][1]));
     ```
-   Assign the variable `apiKey` by your API-Key you took from [your account](https://my.hibrainy.com).
+   Assign the variable `apiKey` by API-Key you took from [your account](https://my.hibrainy.com).
 
 ## Android
 
@@ -238,7 +239,7 @@ The python sample code is [Here](Python/FaceVerification.py).
    
    
  * Add `HiBrainyPostURLUtils` class in your project. [Here](Android/HiBrainyPostURLUtils.java) is the content of the `HiBrainyPostURLUtils.java` class.  
-   - Assign the variable `apiKey` by your API-Key you took from [your account](https://my.hibrainy.com).
+   - Assign the variable `apiKey` by API-Key you took from [your account](https://my.hibrainy.com).
    - Replace `YourPackageName` with your Package Name.
 
  * Insert the following element as a direct child of the manifest element. 
