@@ -2,7 +2,7 @@ import requests
 
 
 api_url = 'http://api.hibrainy.com/api/v1/Face/FaceVerification'
-api_key = 'Your API Key'
+api_key = 'Your API-Key'
 
 image1_path = 'Path to image1 directory'
 image1_name = 'Image name1'
