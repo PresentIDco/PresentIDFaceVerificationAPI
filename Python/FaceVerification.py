@@ -2,7 +2,7 @@ import requests
 
 
 api_url = 'https://face-recognition4.p.rapidapi.com/FaceVerification'
-api_key = 'Your API Key'
+api_key = 'Your API-Key'
 
 image1_path = 'Path to image1 directory'
 image1_name = 'Image name1'
