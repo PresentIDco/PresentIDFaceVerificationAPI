@@ -1,5 +1,5 @@
 # HiBrainy - Face Verification API Documentation
-The HiBrainy Face Verification API is organized around RESTful and is called through post method. The parameters and input files are sent to the API in the form of Multipart Form. The service output is returned in Json format.
+The HiBrainy Face Verification API is organized around RESTful and is called through post method. The parameters and input files are sent to the API in the form of Multipart Form. The service output is returned in JSON format.
 
 ## Output Template
 
