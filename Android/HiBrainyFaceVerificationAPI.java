@@ -15,7 +15,7 @@ import java.net.InetAddress;
 import java.util.List;
 
 
-public class HiBrainyFaceVerificationAPI{
+public class PresentIDFaceVerificationAPI{
 	private static int resultCode;
 	
     public static void faceVerification(String imageFile1, String imageFile2){
