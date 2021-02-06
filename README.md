@@ -1,5 +1,5 @@
-# HiBrainy - Face Verification API Documentation
-The HiBrainy Face Verification API is organized around RESTful and is called through post method. The parameters and input files are sent to the API in the form of Multipart Form. The service output is returned in JSON format.
+# PresentID - Face Verification API Documentation
+The PresentID Face Verification API is organized around RESTful and is called through post method. The parameters and input files are sent to the API in the form of Multipart Form. The service output is returned in JSON format.
 
 ## Output Template
 
@@ -54,7 +54,7 @@ The HiBrainy Face Verification API is organized around RESTful and is called thr
 
 ### Prerequisites
  - Face Recognition API-Key
-    - You can get a free trial API-Key by creating your free account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
+    - You can get a free trial API-Key by creating your free account from [https://rapidapi/user/presentid](https://rapidapi/user/presentid). Login to your account, click on Tokens and get your Face Recognition API-Key.
     
  - [Requests](https://pypi.org/project/requests/) python package
     - To install [requests](https://pypi.org/project/requests/), simply:
@@ -66,7 +66,7 @@ The HiBrainy Face Verification API is organized around RESTful and is called thr
 ### Usage
 The python sample code is [Here](Python/FaceVerification.py).  
 
-* Assign the variable `api_key` by API-Key you took from [your account](https://my.hibrainy.com).
+* Assign the variable `api_key` by API-Key you took from [your account](https://rapidapi/user/presentid).
 
   ```python
     api_key = 'Your API-Key'
@@ -84,7 +84,7 @@ The python sample code is [Here](Python/FaceVerification.py).
 
 ### Prerequisites
  - Face Recognition API-Key
-    - You can get a free trial API-Key by creating your free account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
+    - You can get a free trial API-Key by creating your free account from [https://rapidapi/user/presentid](https://rapidapi/user/presentid). Login to your account, click on Tokens and get your Face Recognition API-Key.
     
  - [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) framework for .NET 
     - Run this command in the Package Manager Console:  
@@ -138,14 +138,14 @@ The python sample code is [Here](Python/FaceVerification.py).
       Console.WriteLine("RightBottom " + " X:" + verificationResult.Features[i].Framepoints.RightBottom.x + " Y:" + verificationResult.Features[i].Framepoints.RightBottom.y + "\n");
     }
     ```
-  Assign the variable `apiKey` by API-Key you took from [your account](https://my.hibrainy.com).
+  Assign the variable `apiKey` by API-Key you took from [your account](https://rapidapi/user/presentid).
 
 
 ## Java
 
 ### Prerequisites
  - Face Recognition API-Key
-    - You can get a free trial API-Key by creating your free account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
+    - You can get a free trial API-Key by creating your free account from [https://rapidapi/user/presentid](https://rapidapi/user/presentid). Login to your account, click on Tokens and get your Face Recognition API-Key.
     
  - [OkHttp package](https://github.com/square/okhttp/) package  
 
@@ -214,13 +214,13 @@ The python sample code is [Here](Python/FaceVerification.py).
     System.out.println("Right Top:\t"+"X: "+Integer.toString(rt[1][0])+"\tY: "+Integer.toString(rt[1][1]));
     System.out.println("LeftTop:\t"+"X: "+Integer.toString(rb[1][0])+"\tY: "+Integer.toString(rb[1][1]));
     ```
-   Assign the variable `apiKey` by API-Key you took from [your account](https://my.hibrainy.com).
+   Assign the variable `apiKey` by API-Key you took from [your account](https://rapidapi/user/presentid).
 
 ## Android
 
 ### Prerequisites 
  - Face Recognition API-Key
-    - You can get a free trial API-Key by creating your free account from [HiBrainy.com](https://my.hibrainy.com/home/signup). Login to your account, click on Tokens and get your Face Recognition API-Key.
+    - You can get a free trial API-Key by creating your free account from [https://rapidapi/user/presentid](https://rapidapi/user/presentid). Login to your account, click on Tokens and get your Face Recognition API-Key.
     
   - [Visual Studio](https://visualstudio.microsoft.com/downloads/)  
   - [Android Studio](https://developer.android.com/studio/) with API level 19 or later 
