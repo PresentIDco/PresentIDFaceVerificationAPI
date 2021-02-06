@@ -1,8 +1,8 @@
-class HiBrainyFaceVerificationAPI
+class PresentIDFaceVerificationAPI
 {
     string apiKey;
 
-    public HiBrainyFaceVerificationAPI(string apiKey)
+    public PresentIDFaceVerificationAPI(string apiKey)
     {
         this.apiKey = apiKey;
     }
