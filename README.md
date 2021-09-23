@@ -1,9 +1,15 @@
 ## PresentID Photo ID Matching (Face Verification)
-PresentID Photo ID matching API evaluates whether two faces belong to the same person or not.
-he Verify API performs authentication against two detected faces. Practically, it evaluates whether two faces belong to the same person or not. This capability is potentially useful in security scenarios.
+PresentID Photo ID matching API evaluates whether two faces belong to the same person or not. Face verification ensures a one-to-one (1:1) match of a face image captured at the time of onboarding with an image captured from a trusted credential such as a driver’s license, or a passport.
 
-![photoidmatching2](https://user-images.githubusercontent.com/63470748/119772979-db51ff80-be74-11eb-90c9-7c9754649be9.png)
+We have created a very deep convolutional neural network to extract very high-level features from a face for each person. We have provided a large-scale image database of faces from many sources e.g. web crowdsourcing, our built-in house dataset. There is a lot of diversity of races in the database. Our model inference time is 115ms on Intel CPU corei7 6700k. Especially in our solution, we save some frames that come from client SDK that is selected based on our own algorithm. This feature makes our matching stronger. Moreover, we save a checksum from a video to check duplicated videos.
 
+Our method has got promising results under large appearance variations e.g. pose, age gaps, skin, glass, makeup, and beard.
+
+
+![photoidmatching2](https://presentid.com/assets/img/photoidmatching2.png)
+
+**Youtube Videos**
+- https://www.youtube.com/embed/RqKJVjiaQhQ
 
 **Input:**
 - Image file
@@ -16,7 +22,7 @@ he Verify API performs authentication against two detected faces. Practically, i
 - Similar percent 
 - Result message
 
-**Ability & Potentials:**
+**Features:**
 - Less than 10 seconds.
 - Accuracy is %99.76 on the LFW face verification dataset, a very popular benchmark.
 - Support IOS, Android, Windows and Mac devices.
@@ -24,18 +30,14 @@ he Verify API performs authentication against two detected faces. Practically, i
 - Easy integration with your app.
 
 **Use Cases:**
-- Attendance systems
-- Dating websites
-- Digital banking 
-- Visitor identification
-- Expedited service
-- Access management
-- Public safety
-- Fraud Prevention
-- Know your customer
-- Attendance systems
-- Dating websites
-- Digital banking
+- Access Control
+- Onboarding
+- Fintech
+- Car sharing & Taxi
+- Online Brokers
+- Health Care
+- Dating Apps
+- Customer Support
 
 **Rules & Restrictions:**
 - Send data via Base64 or an image URL or an image file.
