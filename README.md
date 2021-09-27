@@ -6,7 +6,6 @@ We have created a very deep convolutional neural network to extract very high-le
 Our method has got promising results under large appearance variations e.g. pose, age gaps, skin, glass, makeup, and beard.
 
 
-![photoidmatching2](https://presentid.com/assets/img/photoidmatching2.png)
 
 **Youtube Videos**
 - https://www.youtube.com/embed/RqKJVjiaQhQ
